@@ -27,4 +27,5 @@ void loop()
     // 转换为角度值，并设置到马达
     mada_read = map(servo_read, 0, 1023, 0, 180);
     mada.write(mada_read);
+    delay(20); // 延时15ms
 }

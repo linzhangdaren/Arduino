@@ -25,6 +25,7 @@ void loop()
     // digitalRead(Button)用于读取Button引脚的电平状态，LOW表示低电平，即按键被按下
     if (digitalRead(Button) == LOW)
     {
+        delay(100); // 延时100ms，消除抖动
         // digitalWrite(Led, !LedState)用于控制LED的亮灭
         // !LedState是对当前LED状态取反，如果当前是亮（true）则变为灭（false），反之亦然
         digitalWrite(Led, !LedState);
@@ -32,6 +33,6 @@ void loop()
         LedState = !LedState;
         // 延时400ms，这是为了消除按键抖动的影响
         // 按键按下或释放时会产生短暂的电平不稳定，通过延时可以避免程序误判
-        delay(400);
+        delay(100);
     }
 }

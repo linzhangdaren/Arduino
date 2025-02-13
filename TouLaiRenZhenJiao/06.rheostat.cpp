@@ -1,4 +1,5 @@
 #include <Arduino.h>
+//可变电阻 定位器 rheostat 实时读取信息
 
 int ledPin = 3; // 定义LED连接的引脚
 int R = A0;     // 定义电阻连接的模拟引脚
